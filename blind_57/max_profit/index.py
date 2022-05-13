@@ -30,8 +30,27 @@ Constraints:
     0 <= prices[i] <= 104
 
 """
+
+from typing import List
+
 ####################################################################################
-# Solution with O(n^2) - nested loop - we can do better ############################
+# O(n) ###############################################################
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        min_price = float('inf')
+        max_profit = 0
+
+        for price in prices:
+            if price < min_price:
+                min_price = price
+            elif price - min_price > max_profit:
+                    max_profit = price - min_price
+
+        return max_profit
+
+
+####################################################################################
+# O(n^2) - nested loop - we can do better ############################
 # class Solution:
 #     def max_profit(self, prices: list[int]) -> int:
 #         max_profit = 0
@@ -46,17 +65,3 @@ Constraints:
 
 #         return max_profit
 
-####################################################################################
-# Solution with O(n) ###############################################################
-class Solution:
-    def maxProfit(self, prices: list[int]) -> int:
-        min_price = float('inf')
-        max_profit = 0
-
-        for price in prices:
-            if price < min_price:
-                min_price = price
-            elif price - min_price > max_profit:
-                    max_profit = price - min_price
-
-        return max_profit

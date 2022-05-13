@@ -31,6 +31,7 @@ Constraints:
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 """
 
+# O(n)
 def two_sum(nums, target):
     cache = {}
 
