@@ -76,3 +76,20 @@ class Solution:
         
         return products
 
+
+"""
+Explanation
+
+nums = [2, 5, 1, 7]
+
+                                [1, 1, 1 ,1]
+multiply from left to right         2  2  2
+                                       5  5
+                                          1
+multiply from right to left     7   7  7   
+                                1   1
+                                5
+
+Each index gets multiplied by every number except itself
+
+"""
