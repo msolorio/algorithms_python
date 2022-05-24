@@ -73,7 +73,7 @@ class Solution:
 #         mid_idx = len(nums) // 2 
 
 #         if nums[mid_idx] < nums[0]:
-#             first_half = nums[:mid_idx]
+#             first_half = nums[:mid_idx + 1]
 #             return self.findMin(first_half)
 
 #         else:
